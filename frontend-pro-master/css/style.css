@@ -1,0 +1,249 @@
+body {
+  background: #e5e5e5;
+}
+a, u {
+    text-decoration: none;
+    color: black;
+}
+header {
+  background: white;
+  box-shadow: 0px 9.03012px 27.0904px rgba(176, 190, 197, 0.32),
+    0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32);
+}
+.logo {
+  margin: 20px 0;
+}
+.input-serch {
+  margin-top: 3px;
+}
+.title-main {
+  margin-top: 40px;
+}
+.tbody {
+  background: white;
+}
+.none{
+    display: none !important;
+}
+.container {
+  position: relative;
+}
+.add-client {
+  display: block !important;
+  color: #9873FF;
+  border: solid 2px #9873FF;
+  width: 216px;
+  height: 44px;
+  margin: 40px auto;
+}
+
+.form-control {
+  display: block;
+  margin-bottom: 32px;
+  border: none;
+  border-bottom: solid 1px #c8c5d1;
+  border-radius: 0;
+}
+.add-context {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  margin-left: 5px;
+}
+.add-contact {
+    background: #C8C5D1;
+    width: 100%;
+    align-items: center;
+    padding:10px 30px;
+}
+.modal-header {
+    border-bottom: none;
+
+}
+.modal-title{
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+.add-info {
+    cursor: pointer;
+    margin-top: -8px;
+}
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+}
+.btn-close{
+    margin: 0 !important;
+}
+.btn-mdsave {
+    display: block !important;
+    width: 147px;
+    background: #9873FF;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    margin-bottom: 5px;
+}
+.close-model {
+    display: block;
+    margin-left: 45px;
+    align-items: center;
+}
+.dop-input {
+    width: 100%;
+}
+.info {
+    margin-left: auto;
+}
+.add-btninfo {
+    justify-content: center;
+}
+.btn-delite{
+    background: #9873FF;
+    height: 44px;
+    width: 130px;
+}
+
+.del-body{
+    max-width: 275px;
+    text-align: center;
+    margin: 0 auto;
+}
+.del-footer{
+    margin: 0 auto;
+}
+.sort{
+    cursor: pointer;
+}
+.input-wrapper{
+    position: relative;
+}
+.just-validate-error-label{
+  position: absolute;
+  top:90%;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* В нижней части всплывающей подсказки */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Текст подсказки */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Разместите текст всплывающей подсказки - см. Примеры ниже! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Показывать текст всплывающей подсказки при наведении указателя мыши на контейнер всплывающей подсказки */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.btn-pos{
+   display: inline-block;
+    margin-right: 5px;
+
+}
+.table-clear{
+    height: 300px;
+}
+.spine-table{
+    position: relative;
+}
+.spinner-border{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 36px;
+    height: 36px;
+    border: 0.35em solid #9873FF;
+    border-right-color: transparent;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.modal-body{
+    padding: 0;
+}
+.fio{
+    padding: 0 30px;
+}
+.contAdd{
+    margin-bottom: 15px;
+}
+.close_con{
+    border: solid 1px grey;
+    border-radius: 0;
+    width: 27px;
+    padding: 5px;
+
+}
+select {
+    background: transparent;
+    max-width: 178px;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 16px;
+    border: 0;
+    border-radius: 0 !important;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #000;
+
+}
+select:focus{
+    outline: none;
+}
+select option{
+    width: 50px !important;
+    background: #C8C5D1;
+    border-radius: 0;
+}
+
+.styleSelect {
+    width: 140px;
+    overflow: hidden;
+    background: url("../img/selectArrow.svg") no-repeat right #C8C5D1;
+    border: 1px solid grey;
+    border-radius: 0;
+}
+.styleSelectActive {
+    background: url("../img/arrowselectUp.svg") no-repeat right #C8C5D1;
+}
+.labinput{
+    font-size: 10px;
+    font-weight: 400;
+    color: #B0B0B0;
+}
+.mod_window{
+    min-height: 550px;
+}
+#message{
+    color: red;
+}
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1 logo"><img src="img/logo.png" alt="logo" /></div>
+          <div class="col-sm-8">
+            <form action="">
+              <div class="form-group input-serch">
+                <label for="exampleInputEmail1"></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Введите запрос"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="title-main">Клиенты</h1>
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th  class="sort" id="thid" scope="col">
+              ID<img id="imgId" src="img/arrow_downward.svg" alt="arrow" />
+            </th>
+            <th class="sort" id ="thName" scope="col">Фамилия Имя Отчество<img src="img/arrow_downward.svg" id="imgName"><img src="img/ab.svg"></th>
+            <th class="sort" id = "thDateCreate" scope="col">Дата и время создания<img src="img/arrow_downward.svg" id="imgCreate"></th>
+            <th class="sort" id = "thDateUpdate" scope="col">Последние изменения<img src="img/arrow_downward.svg" id="imgUpdate"></th>
+            <th scope="col">Контакты</th>
+            <th scope="col">Действия</th>
+          </tr>
+          </thead>
+
+          <tbody id="tbody" class="tbody">
+             <tr id="spin-table" class="spine-table">
+               <th class="table-clear"></th>
+               <td></td>
+               <td>
+                 <div class="spinner-border" role="status">
+                   <span class="sr-only"></span>
+                 </div>
+               </td>
+               <td></td>
+               <td></td>
+               <td></td>
+             </tr>
+
+          </tbody>
+
+        </table>
+
+        <button
+                type="button"
+                class="add-client btn"
+                id="add-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+        >
+          <img src="img/addclient.svg" alt="add-client" />Добавить клиента
+        </button>
+      </div>
+      <!-- Modal -->
+      <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content mod_window">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Новый клиент</h5>
+              <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="" id="form">
+                <div class="fio">
+                  <div class="input-wrapper">
+                    <label for="soname" class="labinput">Фамилия*</label>
+                    <input type="text" id="soname" class="form-control form__input"  />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="name" class="labinput">Имя*</label>
+                    <input type="text" id="name" class="form-control form__input"  />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="surname" class="labinput">Отчество</label>
+                    <input
+                            type="text"
+                            class="form-control form__input"
+                            id="surname"
+                    />
+                  </div>
+                </div>
+
+
+                <div class="add-contact">
+                  <div id="contacts">
+
+                  </div>
+                  <div class="flex add-btninfo">
+                    <img src="img/add_circle_outline.svg" class="add-info" id="addcontact" alt="" />
+                    <h2 class="add-context">Добавить контакт</h2>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <div id="message"></div>
+                  <div class="mdsave">
+                    <button type="submit" class="btn btn-mdsave"
+                             id="save">Сохранить</button>
+                    <a href="" class="close-model" id="linkdel" data-bs-toggle="modal" aria-label="Close" data-bs-target="#exampleModalDelete">Удалить</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <!-- Modal Delete-->
+      <div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalDeleteLabel">Удалить клиента</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body del-body">
+
+                Вы действительно хотите удалить данного клиента?
+
+            </div>
+            <div class="modal-footer del-footer">
+              <button type="button" class="btn btn-primary btn-delite" id="deleteBtn" data-bs-dismiss="modal">Удалить</button>
+              <a class="btn"  data-bs-dismiss="modal">Отмена</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+      <footer></footer>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+  </body>
+</html>
